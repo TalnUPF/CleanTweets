@@ -1,42 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
- <repositories>
-        <!--  
-        <repository>
-            <id>taln</id>
-            <url>http://maven-taln.s.upf.edu/repository/all</url>
-        </repository>
-        -->
-        <repository>
-            <id>ukp-oss-releases</id>
-            <url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
-        </repository>
-        <repository>
-            <id>ukp-oss-snapshots</id>
-            <url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-snapshots</url>
-        </repository>
-    </repositories>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>edu.upf.taln.uima.clean</groupId>
-  <artifactId>twitter_clean</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>edu.upf.taln.uima.clean</groupId>
+	<artifactId>twitter_clean</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>twitter_clean</name>
-  <url>http://maven.apache.org</url>
+	<name>twitter_clean</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
-  <parent>
-  	<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-  	<artifactId>de.tudarmstadt.ukp.dkpro.core-asl</artifactId>
-  	<version>1.9.0-SNAPSHOT</version>
-  	<relativePath>../dkpro-core/dkpro-core-asl</relativePath>
-  </parent>
-  <dependencies>
+
+	<dependencies>
 		<dependency>
 			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 			<artifactId>de.tudarmstadt.ukp.dkpro.core.api.metadata-asl</artifactId>
@@ -46,80 +27,80 @@
 			<artifactId>de.tudarmstadt.ukp.dkpro.core.api.transform-asl</artifactId>
 		</dependency>
 		<dependency>
-			  <groupId>com.vdurmont</groupId>
-			  <artifactId>emoji-java</artifactId>
- 			 <version>3.3.0</version>
+			<groupId>com.vdurmont</groupId>
+			<artifactId>emoji-java</artifactId>
+			<version>3.3.0</version>
 		</dependency>
-        <dependency>
-            <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-            <artifactId>de.tudarmstadt.ukp.dkpro.core.io.text-asl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-            <artifactId>de.tudarmstadt.ukp.dkpro.core.io.xmi-asl</artifactId>
-        </dependency>
 		<dependency>
-  		    <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-  		    <artifactId>de.tudarmstadt.ukp.dkpro.core.tokit-asl</artifactId>
+			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+			<artifactId>de.tudarmstadt.ukp.dkpro.core.io.text-asl</artifactId>
+			<scope>test</scope>
 		</dependency>
-	    <dependency>
-    	<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-    		<artifactId>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+			<artifactId>de.tudarmstadt.ukp.dkpro.core.io.xmi-asl</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+			<artifactId>de.tudarmstadt.ukp.dkpro.core.tokit-asl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+			<artifactId>
     			de.tudarmstadt.ukp.dkpro.core.languagetool-asl
     		</artifactId>
-    	</dependency>
-	    <dependency>
-	    	<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-	    	<artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+			<artifactId>
 	    		de.tudarmstadt.ukp.dkpro.core.castransformation-asl
 	    	</artifactId>
-	    </dependency>
-	    <dependency>
-	    	<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-	    	<artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+			<artifactId>
 	    		de.tudarmstadt.ukp.dkpro.core.arktools-gpl
 	    	</artifactId>
-	    	<exclusions>
-	    		<exclusion>
-	    			<groupId>xom</groupId>
-	    			<artifactId>xom</artifactId>
-	    		</exclusion>
-	    		<exclusion>
-	    			<groupId>edu.stanford.nlp</groupId>
-	    			<artifactId>stanford-corenlp</artifactId>
-	    		</exclusion>
-	    		<exclusion>
-	    			<groupId>edu.berkeley.nlp</groupId>
-	    			<artifactId>berkeleyparser</artifactId>
-	    		</exclusion>
-	    	</exclusions>
-	    </dependency>
-  </dependencies>
- 
+			<exclusions>
+				<exclusion>
+					<groupId>xom</groupId>
+					<artifactId>xom</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>edu.stanford.nlp</groupId>
+					<artifactId>stanford-corenlp</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>edu.berkeley.nlp</groupId>
+					<artifactId>berkeleyparser</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
-
 		<dependencies>
-
-
 			<dependency>
-
 				<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-
 				<artifactId>de.tudarmstadt.ukp.dkpro.core-gpl</artifactId>
-
 				<version>1.9.0-SNAPSHOT</version>
-
 				<type>pom</type>
-
 				<scope>import</scope>
-
 			</dependency>
-
 		</dependencies>
-
 	</dependencyManagement>
+	<repositories>
+		<repository>
+			<id>ukp-oss-releases</id>
+			<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
+		</repository>
+		<repository>
+			<id>ukp-oss-snapshots</id>
+			<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-snapshots</url>
+		</repository>
+	</repositories>
 
-
-  
 </project>
