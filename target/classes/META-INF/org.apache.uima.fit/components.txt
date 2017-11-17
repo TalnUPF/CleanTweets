@@ -1,1 +1,0 @@
-classpath*:edu/upf/taln/uima/clean/twitter_clean/CleanTokens.xml
