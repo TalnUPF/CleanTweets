@@ -1,8 +1,0 @@
-This 🔥 is a simple text for testing. We will check if it works! If it doesn't then we will do another one.
-It has @some #hashtags and @users and we will add some extra stuff.
-For example an url like http://this.is.url.com
-or othter things like a retweet. #CamelCaseHashTag
-RT @peter: I don't believe this is processed by UIMA...
- #portugalfire🔥 Στοιχεία για τη φονική πυρκαγιά στην Πορτογαλία - Ποιες είναι οι φονικότερες πυρκαγιές στον κόσμο;… https://t.co/ekq8iqKG6G
-Deodorisation after a fire using a hot 🔥 fogger! Απόσμηση μετά από πυρκαγιά 🔥 με Hot fogger!… https://t.co/CjSlzmsoF5
-RT @amna_news: 🔥 Σε εξέλιξη η #πυρκαγιά στην Κορώνη Μεσσηνίας. Ενισχύθηκαν οι πυροσβεστικές δυνάμεις https://t.co/sgn4eqhW0Y https://t.co/S…
