@@ -90,7 +90,7 @@ public class CleanTokens
         for (Token token : tokens) {
             if (++elem==size) status=Status.END; //last element;
         	TokInfo info= detectTokenType(token);
-        	System.out.println(elem +"--" + size + "-" +status + "---" + info.token.getCoveredText() + " --- " + info.replacement +
+        	getLogger().info(elem +"--" + size + "-" +status + "---" + info.token.getCoveredText() + " --- " + info.replacement +
         			" ----" + info.tokType );
         	switch (status) {
         	case INITIAL:
@@ -213,7 +213,7 @@ public class CleanTokens
 			return new TokInfo(TokType.HASHTAG,result,token);
 		}
 		}catch (Exception e) {
-	           System.out.println("--"+text+"--");
+		       getLogger().error("--"+text+"--");
 	           e.printStackTrace();
 	           throw e;
 	        } 
